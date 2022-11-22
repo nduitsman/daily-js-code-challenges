@@ -128,32 +128,40 @@
 // let entrance = [1,2];
 // nearestExit(maze, entrance);
 
-var addBinary = function(a, b) {
-    let carry = 0;
-    let size = 0;
-    value = '';
-    if(a.length > b.length){ size = a.length }
-    else {size = b.length}
-    for(i = 0; i < size; i++){
-        tmpA = parseInt(a[a.length-1-i]);
-        tmpB = parseInt(b[b.length-1-i]);
-        tmpResult = (tmpA || 0)+(tmpB || 0) + carry;
-        if(tmpResult === 2) {
-            tmpResult = 0;
-            carry = 1;
-        }
-        else if(tmpResult === 3){
-            tmpResult = 1;
-            carry = 1;
-        }
-        else if(tmpResult === 0 || tmpResult === 1){ 
-            carry = 0;
-        }
-        value += tmpResult;
+// var addBinary = function(a, b) {
+//     let carry = 0;
+//     let size = 0;
+//     value = '';
+//     if(a.length > b.length){ size = a.length }
+//     else {size = b.length}
+//     for(i = 0; i < size; i++){
+//         tmpA = parseInt(a[a.length-1-i]);
+//         tmpB = parseInt(b[b.length-1-i]);
+//         tmpResult = (tmpA || 0)+(tmpB || 0) + carry;
+//         if(tmpResult === 2) {
+//             tmpResult = 0;
+//             carry = 1;
+//         }
+//         else if(tmpResult === 3){
+//             tmpResult = 1;
+//             carry = 1;
+//         }
+//         else if(tmpResult === 0 || tmpResult === 1){ 
+//             carry = 0;
+//         }
+//         value += tmpResult;
+//     }
+//     if(carry){value += carry}
+//     value = value.split('').reverse().join('');
+//     console.log(value)
+//     return value;
+// };
+// addBinary('0','0');
+
+var mySqrt = function(x) {
+    for(i = 1; i < x; i++){
+        product = i * i;
+        console.log(product);
     }
-    if(carry){value += carry}
-    value = value.split('').reverse().join('');
-    console.log(value)
-    return value;
 };
-addBinary('0','0');
+mySqrt(100);
