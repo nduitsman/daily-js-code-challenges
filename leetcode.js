@@ -159,9 +159,14 @@
 // addBinary('0','0');
 
 var mySqrt = function(x) {
-    for(i = 1; i < x; i++){
+    for(i = 0; i <= x; i++){
         product = i * i;
-        console.log(product);
+        if(product === x) {
+            return i;
+        }
+        if(product > x) {
+            return i-1;
+        }
     }
 };
-mySqrt(100);
+mySqrt(8);
